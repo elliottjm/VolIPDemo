@@ -1,17 +1,15 @@
 //
 //  AppDelegate.m
-//  demo
+//  JailbreakDemo
 //
-//  Created by Apple on 2018/9/10.
-//  Copyright © 2018年 YouBanTu. All rights reserved.
+//  Created by Grabin on 2017/12/27.
+//  Copyright © 2017年 GrabinWong. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "DeviceSafeTool.h"
 
 @interface AppDelegate ()
-
-
-
 
 @end
 
@@ -19,10 +17,42 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Override point for customization after application launch.
+    NSLog(@"%@",[[NSBundle mainBundle] resourcePath]);
+    
     
     
     
     return YES;
+}
+
+- (UIViewController *)getCurrentVC {
+    
+    UIWindow *window = [[UIApplication sharedApplication].windows firstObject];
+    if (!window) {
+        return nil;
+    }
+    UIView *tempView;
+    for (UIView *subview in window.subviews) {
+        if ([[subview.classForCoder description] isEqualToString:@"UILayoutContainerView"]) {
+            tempView = subview;
+            break;
+        }
+    }
+    if (!tempView) {
+        tempView = [window.subviews lastObject];
+    }
+    
+    id nextResponder = [tempView nextResponder];
+    while (![nextResponder isKindOfClass:[UIViewController class]] || [nextResponder isKindOfClass:[UINavigationController class]] || [nextResponder isKindOfClass:[UITabBarController class]]) {
+        tempView =  [tempView.subviews firstObject];
+        
+        if (!tempView) {
+            return nil;
+        }
+        nextResponder = [tempView nextResponder];
+    }
+    return  (UIViewController *)nextResponder;
 }
 
 

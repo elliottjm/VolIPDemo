@@ -13,6 +13,7 @@
 		18A89E0921463946002B2BF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A89E0821463946002B2BF9 /* Assets.xcassets */; };
 		18A89E0C21463946002B2BF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A89E0A21463946002B2BF9 /* LaunchScreen.storyboard */; };
 		18A89E0F21463946002B2BF9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A89E0E21463946002B2BF9 /* main.m */; };
+		18A89E1C21463D6B002B2BF9 /* DeviceSafeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A89E1A21463D6B002B2BF9 /* DeviceSafeTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		18A89E0B21463946002B2BF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18A89E0D21463946002B2BF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18A89E0E21463946002B2BF9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18A89E1A21463D6B002B2BF9 /* DeviceSafeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceSafeTool.m; sourceTree = "<group>"; };
+		18A89E1B21463D6B002B2BF9 /* DeviceSafeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceSafeTool.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		18A89DFE21463944002B2BF9 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				18A89E1921463D6B002B2BF9 /* DeviceSafeTool */,
 				18A89DFF21463944002B2BF9 /* AppDelegate.h */,
 				18A89E0021463944002B2BF9 /* AppDelegate.m */,
 				18A89E0221463944002B2BF9 /* ViewController.h */,
@@ -69,6 +73,16 @@
 				18A89E0E21463946002B2BF9 /* main.m */,
 			);
 			path = demo;
+			sourceTree = "<group>";
+		};
+		18A89E1921463D6B002B2BF9 /* DeviceSafeTool */ = {
+			isa = PBXGroup;
+			children = (
+				18A89E1A21463D6B002B2BF9 /* DeviceSafeTool.m */,
+				18A89E1B21463D6B002B2BF9 /* DeviceSafeTool.h */,
+			);
+			name = DeviceSafeTool;
+			path = "../../../Downloads/AppSafeDemo-master/JailbreakDemo/JailbreakDemo/DeviceSafeTool";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A89E1C21463D6B002B2BF9 /* DeviceSafeTool.m in Sources */,
 				18A89E0421463944002B2BF9 /* ViewController.m in Sources */,
 				18A89E0F21463946002B2BF9 /* main.m in Sources */,
 				18A89E0121463944002B2BF9 /* AppDelegate.m in Sources */,
